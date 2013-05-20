@@ -6,6 +6,9 @@
     "mocha": "~1.9.0",
     "superagent": "~0.14.2"
   },
+  "dependencies": {
+    "emitter-component": "*"
+  },
   "component": {
     "scripts": {
       "queue/index.js": "index.js"
