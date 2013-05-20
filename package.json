@@ -1,0 +1,14 @@
+{
+  "name": "queue-component",
+  "version": "1.0.0",
+  "devDependencies": {
+    "should": "~1.2.2",
+    "mocha": "~1.9.0",
+    "superagent": "~0.14.2"
+  },
+  "component": {
+    "scripts": {
+      "queue/index.js": "index.js"
+    }
+  }
+}
