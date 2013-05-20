@@ -56,7 +56,7 @@ Queue.prototype.__defineGetter__('length', function(){
 
 Queue.prototype.push = function(fn, cb){
   this.jobs.push([fn, cb]);
-  process.nextTick(this.run.bind(this));
+  setTimeout(this.run.bind(this), 0);
 };
 
 /**
