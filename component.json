@@ -1,7 +1,7 @@
 {
   "name": "queue",
   "repo": "component/queue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "function job queue with concurrency and timeout support",
   "keywords": ["queue"],
   "scripts": ["index.js"],
