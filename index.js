@@ -30,21 +30,10 @@ function Queue(options) {
 }
 
 /**
- * Inherit from `Emitter.prototype`.
+ * Mixin emitter.
  */
 
-Queue.prototype.__proto__ = Emitter.prototype;
-
-/**
- * Return queue length.
- *
- * @return {Number}
- * @api public
- */
-
-Queue.prototype.__defineGetter__('length', function(){
-  return this.pending + this.jobs.length;
-});
+Emitter(Queue.prototype);
 
 /**
  * Queue `fn` for execution.
