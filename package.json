@@ -1,6 +1,6 @@
 {
   "name": "queue-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "devDependencies": {
     "should": "~1.2.2",
     "mocha": "~1.9.0",
