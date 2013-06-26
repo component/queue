@@ -55,8 +55,6 @@ Queue.prototype.length = function(){
  */
 
 Queue.prototype.push = function(fn, cb){
-  var ms = this.timeout;
-  if (ms) fn = timeout(fn, ms);
   this.jobs.push([fn, cb]);
   setTimeout(this.run.bind(this), 0);
 };
@@ -84,9 +82,11 @@ Queue.prototype.run = function(){
 
 Queue.prototype.exec = function(job){
   var self = this;
+  var ms = this.timeout;
 
   var fn = job[0];
   var cb = job[1];
+  if (ms) fn = timeout(fn, ms);
 
   this.pending++;
   fn(function(err, res){
