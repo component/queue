@@ -3,7 +3,16 @@
  * Module dependencies.
  */
 
-var Emitter = require('emitter');
+var Emitter;
+var bind;
+
+try {
+  Emitter = require('emitter');
+  bind = require('bind');
+} catch (err) {
+  Emitter = require('component-emitter');
+  bind = require('component-bind');
+}
 
 /**
  * Expose `Queue`.
@@ -56,7 +65,7 @@ Queue.prototype.length = function(){
 
 Queue.prototype.push = function(fn, cb){
   this.jobs.push([fn, cb]);
-  setTimeout(this.run.bind(this), 0);
+  setTimeout(bind(this, this.run), 0);
 };
 
 /**

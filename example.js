@@ -26,7 +26,7 @@ var id = setInterval(function(){
 }, 5000);
 
 var tid = setInterval(function(){
-  console.log('%s queued', q.length);
+  console.log('%s queued', q.length());
 }, 500);
 
 setTimeout(function(){
