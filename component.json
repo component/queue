@@ -5,7 +5,7 @@
   "description": "function job queue with concurrency and timeout support",
   "keywords": ["queue"],
   "dependencies": {
-    "component/emitter": "1.1.2",
+    "component/emitter": "1.2.0",
     "component/bind": "1.0.0"
   },
   "scripts": ["index.js"],
