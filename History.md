@@ -1,4 +1,12 @@
 
+1.1.0 / 2015-03-12
+==================
+
+  * fix browserify build
+  * update "emitter" to v1.2.0
+  * package: add "repository" field
+  * package: rename to "component-queue"
+
 1.0.6 / 2014-06-12
 ==================
 
