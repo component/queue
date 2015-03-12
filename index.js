@@ -7,11 +7,11 @@ var Emitter;
 var bind;
 
 try {
-  Emitter = require('emitter');
-  bind = require('bind');
-} catch (err) {
   Emitter = require('component-emitter');
   bind = require('component-bind');
+} catch (err) {
+  Emitter = require('emitter');
+  bind = require('bind');
 }
 
 /**
