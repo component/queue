@@ -18,6 +18,9 @@
     "emitter": "component-emitter",
     "bind": "component-bind"
   },
+  "scripts": {
+    "test": "mocha --reporter spec --require should --slow 1s"
+  },
   "component": {
     "scripts": {
       "queue/index.js": "index.js"
