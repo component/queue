@@ -98,8 +98,8 @@ Queue.prototype.exec = function(job){
   if (ms) fn = timeout(fn, ms);
 
   this.pending++;
-  fn(function(err, res){
-    cb && cb(err, res);
+  fn.call(self, function(err, res){
+    if (cb) cb.call(self, err, res);
     self.pending--;
     self.run();
   });

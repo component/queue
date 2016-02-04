@@ -2,6 +2,7 @@
 var Queue = require('..');
 
 describe('Queue#push(fn)', function(){
+
   it('should process jobs in order', function(done){
     var q = new Queue;
     var calls = [];
@@ -68,4 +69,24 @@ describe('Queue#push(fn)', function(){
       }, 100);
     });
   })
+
+  it('should set `this` to the Queue instance', function(done){
+    var q = new Queue();
+    var jobCalled = false;
+
+    function job (fn) {
+      q.should.equal(this);
+      jobCalled = true;
+      fn();
+    }
+
+    function finish (err) {
+      q.should.equal(this);
+      jobCalled.should.be.true;
+      done();
+    }
+
+    q.push(job, finish);
+  });
+
 })
