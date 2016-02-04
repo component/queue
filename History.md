@@ -1,4 +1,10 @@
 
+2.0.0 / 2016-02-04
+==================
+
+  * ensure that `this` is set to the Queue instance
+  * package: add `npm test` command
+
 1.1.0 / 2015-03-12
 ==================
 
